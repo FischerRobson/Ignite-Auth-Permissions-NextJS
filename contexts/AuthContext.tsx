@@ -1,7 +1,8 @@
 import Router, { useRouter } from "next/dist/client/router";
 import { createContext, ReactNode, useContext, useEffect, useState } from "react";
-import { api } from "../services/api";
+import { setupApiClient } from "../services/api";
 import { setCookie, parseCookies, destroyCookie } from "nookies";
+import { api } from "../services/apiClient";
 
 type SignInCredentials = {
   email: string;
